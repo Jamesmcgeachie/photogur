@@ -2,10 +2,10 @@
 
 <% @pictures.each do |picture| %>
 <div class="picturecontainer">
-	<div>
+	<div class="picturetitle">
 		<p><span><%= picture.title %></span> by <%= picture.artist %></p>
 	</div>
-	<div>
+	<div class="picture">
 		<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 	</div>
 </div>

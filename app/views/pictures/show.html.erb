@@ -1,11 +1,11 @@
 <h1>Picture <%= @picture.id %></h1>
 <h2><%= @picture.title %></h2>
 <h2>By: <%= @picture.artist %></h2>
-<p>
+<p class="picturetitle">
 	<%= link_to "Back", pictures_path %>
 	<%= link_to "Edit Picture", edit_picture_path(@picture) %>
 	<%= link_to "Delete Picture", picture_path(@picture), method: :delete, data: {confirm: "You sure you wanna delete this pic? It wont come back!"} %>
  </p>
-<div>
+<div class="picture">
 	<%= image_tag @picture.url %>
 </div>
