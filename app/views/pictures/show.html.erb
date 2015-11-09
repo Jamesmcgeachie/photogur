@@ -4,7 +4,7 @@
 <p>
 	<%= link_to "Back", pictures_path %>
 	<%= link_to "Edit Picture", edit_picture_path(@picture) %>
-	<%= link_to "Delete Picture", delete_picture_path(@picture), method: :delete, data: {confirm: "You sure you wanna delete this pic? It wont come back!"} %>
+	<%= link_to "Delete Picture", picture_path(@picture), method: :delete, data: {confirm: "You sure you wanna delete this pic? It wont come back!"} %>
  </p>
 <div>
 	<%= image_tag @picture.url %>
