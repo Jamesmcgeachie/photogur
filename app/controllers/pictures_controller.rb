@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
 
-	before_filter :get_picture, only: [:show, :edit, :update]
+	before_filter :get_picture, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@pictures = Picture.all
@@ -31,6 +31,11 @@ class PicturesController < ApplicationController
 		else
 			render :edit
 		end
+	end
+
+	def destroy
+		@picture.destroy
+		redirect_to pictures_url
 	end
 
 	private
