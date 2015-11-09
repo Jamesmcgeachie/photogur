@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
 
-	before_filter :get_picture, only: [:show]
+	before_filter :get_picture, only: [:show, :edit, :update]
 
 	def index
 		@pictures = Picture.all
@@ -19,6 +19,17 @@ class PicturesController < ApplicationController
 			redirect_to pictures_url
 		else
 			render :new
+		end
+	end
+
+	def edit
+	end
+
+	def update
+		if @picture.update_attributes(sanitized_params)
+			redirect_to "/pictures/#{@picture.id}"
+		else
+			render :edit
 		end
 	end
 

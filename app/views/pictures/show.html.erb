@@ -1,6 +1,10 @@
 <h1>Picture <%= @picture.id %></h1>
 <h2><%= @picture.title %></h2>
 <h2>By: <%= @picture.artist %></h2>
+<p>
+	<%= link_to "Edit Picture", edit_picture_path(@picture) %>
+	<%= link_to "Back", pictures_path %>
+</p>
 <div>
 	<%= image_tag @picture.url %>
 </div>
