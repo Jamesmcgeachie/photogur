@@ -3,11 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #navbar {
+	font-size: 18px;
+	padding: 15px;
 	display: block;
 	text-align: center;
 	float: top;
 	width: 100%;
 	margin: auto;
+}
+
+#contentcontainer {
+	padding-top: 50px;
 }
 
 span {
