@@ -9,6 +9,13 @@ class PicturesController < ApplicationController
 	def show
 	end
 
+	def new
+	end
+
+	def create
+		render :text => "Saving a picture. URL #{params[:url]}, Title #{params[:title]}, Artist #{params[:artst]}."
+	end
+
 	private
 
 	def get_picture
