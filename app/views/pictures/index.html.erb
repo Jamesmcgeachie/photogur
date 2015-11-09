@@ -1,1 +1,11 @@
 <h1>Pictures</h1>
+
+<% @pictures.each do |picture| %>
+	<div>
+		<p><%= picture.title %></p>
+		<p><%= picture.artist %></p>
+	</div>
+	<div>
+		<img src=" <%= picture.url%>">
+	</div>
+<% end %>
