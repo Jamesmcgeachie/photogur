@@ -10,15 +10,25 @@ class PicturesController < ApplicationController
 	end
 
 	def new
+		@picture = Picture.new
 	end
 
 	def create
-		render :text => "Saving a picture. URL #{params[:url]}, Title #{params[:title]}, Artist #{params[:artst]}."
+		@picture = Picture.new(sanitized_params)
+		if @picture.save
+			redirect_to pictures_url
+		else
+			render :new
+		end
 	end
 
 	private
 
 	def get_picture
 		@picture = Picture.find(params[:id])
+	end
+
+	def sanitized_params
+		params.require(:picture).permit(:url, :title, :artist)
 	end
 end
