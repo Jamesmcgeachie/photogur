@@ -1,11 +1,12 @@
-<h1>Pictures</h1>
+<h1>Pictures (Showing all <%= @pictures.length %>)</h1>
 
 <% @pictures.each do |picture| %>
+<div class="picturecontainer">
 	<div>
-		<p><%= picture.title %></p>
-		<p><%= picture.artist %></p>
+		<p><span><%= picture.title %></span> by <%= picture.artist %></p>
 	</div>
 	<div>
-		<img src=" <%= picture.url%>">
+		<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 	</div>
+</div>
 <% end %>
