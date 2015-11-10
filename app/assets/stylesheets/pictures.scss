@@ -21,9 +21,10 @@ span {
 }
 
 .picturecontainer {
-	width: 90%;
+	width: 70%;
 	margin: auto;
-	border: 2px solid black;
+	border: 1px solid navy;
+	background-color: white;
 }
 
 .picturetitle {
@@ -37,6 +38,7 @@ span {
 	margin: auto;
 	text-align: center;
 	padding: 20px;
+	padding-bottom: 40px;
 }
 
 .form {
@@ -45,10 +47,21 @@ span {
 }
 
 h1 {
+	font-size: 28px;
 	text-align: center;
+	color: #F16B3B;
 }
 
 h2 {
+	font-size: 24px;
 	text-align: center;
 }
 
+body {
+	background-color: #DADAF5;
+}
+
+.picturetitle > p {
+	font-size: 20px;
+	padding-top: 30px;
+}
